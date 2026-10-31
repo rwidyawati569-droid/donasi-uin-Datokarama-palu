@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css"><title>Donasi</title></head>
+<body>
+<header class="navbar">
+  <div style="display:flex;align-items:center;gap:12px"><img src="logo-uin.jpg.jpeg" style="height:45px"><h2>Donasi Kita</h2></div>
+  <nav><a href="index.html">Beranda</a><a href="donasi.html">Donasi</a><a href="daftar.html">Info</a></nav>
+</header>
+<section class="container">
+<h3>Form Donasi (FORM)</h3>
+<form id="formDonasi">
+  <label>Nama Lengkap</label><input id="nama" type="text" required placeholder="Nama kamu">
+  <label>NIM / Jurusan</label><input id="nim" type="text" required placeholder="TIF 23">
+  <label>Program Donasi</label>
+  <select id="program" required><option value="">Pilih Program</option><option>Masjid</option><option>Bencana</option></select>
+  <label>Nominal</label>
+  <select id="nominal" required><option value="">Pilih Nominal</option><option>Rp 10.000</option><option>Rp 25.000</option><option>Rp 50.000</option><option>Rp 100.000</option><option>Custom</option></select>
+  <label>Metode</label>
+  <select id="metode" required><option>BSI</option><option>BRI</option><option>DANA</option><option>OVO</option></select>
+  <label>Catatan / Doa</label><textarea id="catatan" placeholder="Semoga berkah..."></textarea>
+  <button type="submit">Kirim Donasi via WA</button>
+</form>
+</section>
+<script>
+document.getElementById('formDonasi').addEventListener('submit', function(e){
+  e.preventDefault();
+  let nama = document.getElementById('nama').value;
+  let nim = document.getElementById('nim').value;
+  let program = document.getElementById('program').value;
+  let nominal = document.getElementById('nominal').value;
+  let metode = document.getElementById('metode').value;
+  let catatan = document.getElementById('catatan').value;
+  
+  let noWA = "62882021589988";
+  let pesan = `Assalamualaikum Admin Donasi Kita%0A%0ANama: ${nama}%0ANIM: ${nim}%0AProgram: ${program}%0ANominal: ${nominal}%0AMetode: ${metode}%0ACatatan: ${catatan}%0A%0ASaya sudah transfer, mohon diverifikasi ya.`;
+  
+  window.open(`https://wa.me/${noWA}?text=${pesan}`, '_blank');
+  alert('Terima kasih! Mengarahkan ke WA Admin...');
+});
+</script>
+</body>
+</html>

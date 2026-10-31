@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donasi Kita - UIN Datokarama</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div style="display:flex;align-items:center;gap:12px">
+    <img src="logo-uin.jpg.jpeg" alt="UIN" style="height:45px">
+    <h2>Donasi Kita</h2>
+  </div>
+  <nav><a href="index.html">Beranda</a><a href="donasi.html">Donasi</a><a href="daftar.html">Info</a></nav>
+</header>
+<section class="hero">
+  <h1>Dari Kampus, Untuk Sesama</h1>
+  <p>Donasi untuk pembangunan masjid & tanggap bencana UIN Datokarama Palu</p>
+  <a href="donasi.html" class="btn">Donasi Sekarang</a>
+</section>
+<section class="container">
+  <h3>Program Donasi Aktif (TABLE)</h3>
+  <div class="filter-btn">
+    <button onclick="filterBarang('semua')">Semua</button>
+    <button onclick="filterBarang('masjid')">Masjid</button>
+    <button onclick="filterBarang('bencana')">Bencana</button>
+  </div>
+  <table id="tabelDonasi">
+    <tr><th>No</th><th>Program</th><th>Terkumpul</th><th>Donatur</th><th>Status</th></tr>
+    <tr data-kategori="masjid"><td>1</td><td>Renovasi Masjid Datokarama</td><td>Rp 32.000.000</td><td>Alumni 2020</td><td>Aktif</td></tr>
+    <tr data-kategori="bencana"><td>2</td><td>Peduli Banjir Palu</td><td>Rp 8.750.000</td><td>BEM FSI</td><td>Aktif</td></tr>
+    <tr data-kategori="masjid"><td>3</td><td>Karpet & Sound Masjid</td><td>Rp 4.100.000</td><td>UKM Masjid</td><td>Selesai</td></tr>
+    <tr data-kategori="bencana"><td>4</td><td>Logistik Pengungsi</td><td>Rp 6.300.000</td><td>Hamba Allah</td><td>Tersalurkan</td></tr>
+  </table>
+</section>
+<footer>© 2026 Donasi Kita - UIN Datokarama Palu | WA: 0882-0215-89988</footer>
+<script src="script.js"></script>
+</body>
+</html>
